@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quizApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Routing Quiz</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300">
+	<link rel="stylesheet" type="text/css" href="public/css/styles.css">
+</head>
+<body>
+	<header id="header" class="">
+		<ul>
+			<li><a ui-sref="home">HOME</a></li>
+		</ul>
+	</header>
+
+	<ui-view></ui-view>
+
+
+
+	<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+	<script src="app.js"></script>
+	<script src="components/home/homeCtrl.js"></script>
+	<script src="components/quiz/quizCtrl.js"></script>
+	<script src="components/results/resultsCtrl.js"></script>
+	<script src="components/services/quizService.js"></script>
+</body>
+</html>
