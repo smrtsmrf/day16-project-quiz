@@ -22,6 +22,7 @@ angular.module('quizApp').directive('multChoice', [function () {
 			$scope.saveAnswer = function (selected) {
 				$scope.save({id: $scope.question.id, answer: selected})
 			}
+
 		}
 		// link: function (scope, iElement, iAttrs) {
 			

@@ -82,9 +82,9 @@ angular.module('quizApp').service('quizService', ['$q', function($q){
          };
 
          for (var i = 0; i < questions.length; i++) {
-             var isCorrect = questions[i].qtype === 'multiple' ? questions[i].choices[questions[i].correct] === answers[questions[i].id] : (questions[i].qtype === 'blank' ? questions[i].correct === answers[questions[i].id] : false)
-             results[questions[i].id] = isCorrect;
-         };
+            var isCorrect = questions[i].qtype === 'multiple' ? questions[i].choices[questions[i].correct] === answers[questions[i].id] : (questions[i].qtype === 'blank' ? questions[i].correct === answers[questions[i].id] : false)
+            results[questions[i].id] = isCorrect;
+        }
 
          defer.resolve(results);
          return defer.promise;
