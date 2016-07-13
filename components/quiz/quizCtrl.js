@@ -5,8 +5,17 @@ angular.module('quizApp').controller('quizCtrl', ['$scope', 'quizService', '$sta
 	$scope.results = {};
 	$scope.currentQuestion = $scope.questions[0];
 
-	$scope.saveAnswer = function (answer) {
-		$scope.answers[$scope.currentQuestion.id] = answer;
+	// $scope.saveAnswer = function (answer) {
+	// 	$scope.answers[$scope.currentQuestion.id] = answer;
+	// 	$scope.nextQuestion();
+
+	// 	if ($scope.results.done) {
+	// 		$scope.checkMyAnswers();
+	// 	};
+	// }
+
+	$scope.saveAnswer = function (id, answer) {
+		$scope.answers[id] = answer;
 		$scope.nextQuestion();
 
 		if ($scope.results.done) {
@@ -47,6 +56,7 @@ angular.module('quizApp').controller('quizCtrl', ['$scope', 'quizService', '$sta
 	$scope.reset = function () {
 		$scope.answers = {};
 		$scope.currentQuestion = $scope.questions[0];
+		$scope.results = {};
 	}
 
 

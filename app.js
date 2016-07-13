@@ -32,7 +32,6 @@ angular.module('quizApp').config(['$stateProvider', '$urlRouterProvider', functi
 		resolve: {
 			questions: function (quizService, $stateParams) {
 				var name = $stateParams.quizName;
-				// console.log('name from app.js: ' + name);
 				return quizService.getQuestions(name);
 			}
 		}

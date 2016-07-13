@@ -71,8 +71,6 @@ angular.module('quizApp').service('quizService', ['$q', function($q){
 
     this.getQuestions = function (name) {
          var defer = $q.defer();
-         // console.log('name from service: ' + name);
-         // console.log(quizSampleObj[name]);
          defer.resolve(quizSampleObj[name.toLowerCase()].questions);
          return defer.promise; 
     }
